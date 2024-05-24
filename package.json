@@ -1,0 +1,37 @@
+{
+  "name": "drft-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+		"dev": "next dev",
+		"build": "npm run build-service-worker && next build",
+		"build-service-worker": "npx esbuild auth-service-worker.js --bundle --outfile=public/auth-service-worker.js",
+    "start": "next start",
+		"lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fontsource/roboto": "^5.0.13",
+    "@mui/icons-material": "^5.15.18",
+    "@mui/material": "^5.15.18",
+    "@mui/material-nextjs": "^5.15.11",
+    "firebase": "^10.12.1",
+    "firebase-admin": "^12.1.0",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+	"browser": {
+		"fs": false,
+		"os": false,
+		"path": false,
+		"child_process": false,
+		"net": false,
+		"tls": false
+	},
+	"devDependencies": {
+		"esbuild": "^0.20.2"
+	}
+}
